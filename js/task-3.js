@@ -1,20 +1,24 @@
-// Оголоси функцію getElementWidth, яка очікує три параметри, значення яких будуть задаватися під час її виклику:
-// • content— перший параметр, ширина контенту
-// • padding — другий параметр, значення горизонтального падінгу для кожної зі сторін
-// • border — третій параметр, значення товщини бордера для кожної зі сторін
-// Значення всіх параметрів будуть рядками формату Npx де N — це довільне число, ціле або дробове.
+// Обєкт profile описує профіль користувача на ігровій платформі. У його властивостях зберігається імя профілю username та кількість активних годин playTime, проведених у грі.
 
-// Доповни код функції так, щоб вона повертала число —загальну ширину елемента.
-// При розрахунку загальної ширини орієнтуйся на те, що значення box-sizing дорівнює border-box.
+// const profile = {
+//     username: "Jacob",
+//   playTime: 300,
+// };
 
-function getElementWidth(content, padding, border) {
-  return (
-    Number.parseFloat(content) +
-    Number.parseFloat(padding) * 2 +
-    Number.parseFloat(border) * 2
-  );
-}
+// Доповни обєкт profile методами для роботи з його властивостями.
 
-console.log(getElementWidth('50px', '8px', '4px')); // 74
-console.log(getElementWidth('60px', '12px', '8.5px')); // 101
-console.log(getElementWidth('200px', '0px', '0px')); // 200
+// Метод changeUsername(newName) повинен приймати рядок (нове імя) в параметр newName та змінювати значення властивості username на нове. Нічого не повертає.
+// Метод updatePlayTime(hours) повинен приймати число (кількість годин) у параметр hours та збільшити на нього значення властивості playTime. Нічого не повертає.
+// Метод getInfo() має повертати рядок формату <Username> has <amount> active hours!, де <Username> — це імя профілю, а <amount> — кількість ігрових годин.
+
+
+
+
+
+// console.log(profile.getInfo()); // "Jacob has 300 active hours!"
+
+// profile.changeUsername("Marco");
+// console.log(profile.getInfo()); // "Marco has 300 active hours!"
+
+// profile.updatePlayTime(20);
+// console.log(profile.getInfo()); // "Marco has 320 active hours!"
